@@ -1,0 +1,48 @@
+public class Hello{
+    public static void Main(){
+        // ↓ここに仕様を満たすコードを書いていこう！
+        int playerHP = 25;
+        int playerAttack = 20;
+        int enemyHP = 50;
+        int enemyAttack = 8;
+        
+        while (true)
+        {
+            System.Console.WriteLine("playerの攻撃！");
+            enemyHP = enemyHP - playerAttack;
+            if (enemyHP <= 0)
+            {
+                System.Console.WriteLine("enemyを倒した！");
+                break;
+            }
+            System.Console.Write("enemyの残HP:");
+            System.Console.WriteLine(enemyHP);
+            
+            System.Console.WriteLine("enemyの攻撃！");
+            playerHP = playerHP - enemyAttack;
+            if (playerHP <= 0)
+            {
+                System.Console.WriteLine("enemyにやられた！");
+                break;
+            }
+            System.Console.Write("playerの残HP:");
+            System.Console.WriteLine(playerHP);
+        
+        }
+        
+        if (enemyHP <= 0)
+        {
+            System.Console.WriteLine("勝利!!!");
+        }
+        else
+        {
+            System.Console.WriteLine("ゲームオーバー");
+        }
+        
+        System.Console.Write("enemyのHP:");
+        System.Console.WriteLine(enemyHP);
+        System.Console.Write("playerのHP:");
+        System.Console.WriteLine(playerHP);
+        // ↑ここまで
+    }
+}
